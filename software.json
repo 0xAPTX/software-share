@@ -23,6 +23,18 @@
       "description": "VMware Fusion 的 macOS 安装映像，用于在 Mac 上创建和管理虚拟机。",
       "note": "构建号 24832108；应用标注最低系统为 macOS 13.0，包含 Intel 与 Apple Silicon 两种架构。",
       "sha256": "a43fd031165896bc1b7ecc61eb07b377bfc01b014c9111b08e18a6a1af121191"
+    },
+    {
+      "release": "claude-ios-1.261019.20",
+      "asset": "Claude-1.261019.20-iOS.ipa",
+      "slug": "claude-ios",
+      "name": "Claude",
+      "version": "1.261019.20",
+      "platform": "iOS / iPadOS",
+      "category": "AI 工具",
+      "description": "Claude 的 iPhone / iPad 应用安装包，以 IPA 文件形式提供下载。",
+      "note": "包内标注最低系统为 iOS 18.0。IPA 文件需通过适用的签名或安装方式使用，网页下载不会直接安装应用。",
+      "sha256": "09739f2ee6122040800c6e7b6d7098d0ffe673c312548b0ebc21c9e76532869e"
     }
   ]
 }
