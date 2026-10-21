@@ -2,8 +2,6 @@ name: Publish software downloads
 on:
   push:
     branches: [main]
-  release:
-    types: [published, edited, deleted]
   workflow_dispatch:
 
 concurrency:
@@ -46,3 +44,7 @@ jobs:
           path: dist
       - uses: actions/deploy-pages@v4
         id: deployment
+      - name: Verify the published build
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: python scripts/verify.py

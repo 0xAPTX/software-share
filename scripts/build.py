@@ -94,6 +94,10 @@ def build(releases, output=ROOT / 'dist'):
         shutil.copyfile(ROOT / 'web' / asset, output / asset)
     (output / '.nojekyll').write_text('')
     (output / 'catalog.json').write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n')
+    (output / 'build-info.json').write_text(json.dumps({
+        'run': os.environ.get('GITHUB_RUN_ID', 'local'),
+        'attempt': os.environ.get('GITHUB_RUN_ATTEMPT', '1'),
+    }) + '\n')
     content = ''.join(card(item) for item in items) or '<p class="empty">首个软件正在准备中，稍后再来看看。</p>'
     (output / 'index.html').write_text(render('index.html', cards=content, count=len(items), repo=repository))
     for item in items:

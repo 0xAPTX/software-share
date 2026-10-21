@@ -1,0 +1,18 @@
+name: Refresh catalog after a release
+on:
+  release:
+    types: [published, edited, deleted]
+permissions:
+  actions: write
+  contents: read
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      # Deploy from main, avoiding the deploy-pages release/tag artifact issue:
+      # https://github.com/actions/deploy-pages/issues/383
+      - name: Start the Pages workflow on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"

@@ -60,3 +60,5 @@ python3 -m http.server 8080 --directory dist
 ```
 
 构建会检查附件归属及 SHA-256（GitHub 返回摘要时与配置核对）。安装包不进入 Git 提交历史；新增软件无需新增 Secrets。GitHub Pages 的下载入口最终跳转到 GitHub Releases，访问者需要能连接 GitHub 的下载服务。
+
+Release 事件会触发 `main` 上的发布工作流，避免 Pages 的 [Release 标签部署旧产物问题](https://github.com/actions/deploy-pages/issues/383)。部署后还会读取线上 `build-info.json` 核对任务编号，确认当前版本已经实际生效。
