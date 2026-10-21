@@ -4,6 +4,7 @@
 
 - 软件目录：<https://0xaptx.github.io/software-share/>
 - iTunes 自动下载入口：<https://0xaptx.github.io/software-share/download/itunes/>
+- VMware Fusion 自动下载入口：<https://0xaptx.github.io/software-share/download/vmware-fusion/>
 - 全部文件与版本：<https://github.com/0xAPTX/software-share/releases>
 
 专属下载页会尝试自动开始下载，并保留「立即下载」按钮；浏览器也可能要求用户点击确认。
@@ -13,12 +14,14 @@
 | 软件 | 版本 | 平台 | 文件大小 |
 | --- | --- | --- | --- |
 | iTunes | 12.6.3.6 | Windows x64 | 270,075,208 字节（257.6 MiB） |
+| VMware Fusion | 13.6.4 / 24832108 | macOS 13.0+，Intel / Apple Silicon | 556,702,913 字节（530.9 MiB） |
 
-文件由仓库维护者提供；版本号和平台读取自安装包元数据。本次文件的原文件名标注为 12.6.5.3，但内部文件版本和产品版本均为 12.6.3.6，页面按内部版本标注。旧版软件请自行确认与你的设备及系统兼容。文件 SHA-256：
+文件由仓库维护者提供，上传时不修改文件内容。iTunes 的原文件名标注为 12.6.5.3，但内部文件版本和产品版本均为 12.6.3.6，页面按内部版本标注。VMware Fusion 的版本、构建号和最低系统版本读取自映像内应用元数据，通用架构已通过可执行文件头确认。旧版软件请自行确认与你的设备及系统兼容。
 
-```text
-fc1af1adeb31b4dc3ba8c3b68a5b329d4dc5b21f3c8c251fd72b1f31bd0116e6
-```
+文件 SHA-256：
+
+- iTunes：`fc1af1adeb31b4dc3ba8c3b68a5b329d4dc5b21f3c8c251fd72b1f31bd0116e6`
+- VMware Fusion：`a43fd031165896bc1b7ecc61eb07b377bfc01b014c9111b08e18a6a1af121191`
 
 ## 以后如何添加软件
 

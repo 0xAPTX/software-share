@@ -11,6 +11,18 @@
       "description": "保留 App Store 功能的 iTunes 旧版安装包，适合需要旧版应用管理功能的用户。",
       "note": "安装包内部版本为 12.6.3.6，原文件名标注为 12.6.5.3。请自行确认与你的 Windows、设备及系统版本兼容。",
       "sha256": "fc1af1adeb31b4dc3ba8c3b68a5b329d4dc5b21f3c8c251fd72b1f31bd0116e6"
+    },
+    {
+      "release": "vmware-fusion-13.6.4-24832108",
+      "asset": "VMware-Fusion-13.6.4-24832108_universal.dmg",
+      "slug": "vmware-fusion",
+      "name": "VMware Fusion",
+      "version": "13.6.4",
+      "platform": "macOS · Universal",
+      "category": "虚拟机工具",
+      "description": "VMware Fusion 的 macOS 安装映像，用于在 Mac 上创建和管理虚拟机。",
+      "note": "构建号 24832108；应用标注最低系统为 macOS 13.0，包含 Intel 与 Apple Silicon 两种架构。",
+      "sha256": "a43fd031165896bc1b7ecc61eb07b377bfc01b014c9111b08e18a6a1af121191"
     }
   ]
 }
