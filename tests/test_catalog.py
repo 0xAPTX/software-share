@@ -11,13 +11,13 @@ import build
 
 def release():
     return {
-        'tag_name': 'itunes-12.6.5.3', 'draft': False, 'prerelease': False,
+        'tag_name': 'itunes-12.6.3.6', 'draft': False, 'prerelease': False,
         'published_at': '2026-10-21T14:00:00Z',
         'assets': [{
-            'id': 42, 'state': 'uploaded', 'name': 'iTunes-12.6.5.3-Windows-x64.exe',
-            'size': 277744968, 'created_at': '2026-10-21T13:59:00Z',
-            'digest': 'sha256:666dcc84d26ea7ba79228f744f9caeac1192a9f274a5e795cc9e9352d41d80f3',
-            'browser_download_url': 'https://github.com/0xAPTX/software-share/releases/download/itunes-12.6.5.3/iTunes-12.6.5.3-Windows-x64.exe',
+            'id': 42, 'state': 'uploaded', 'name': 'iTunes-12.6.3.6-Windows-x64.exe',
+            'size': 270075208, 'created_at': '2026-10-21T13:59:00Z',
+            'digest': 'sha256:fc1af1adeb31b4dc3ba8c3b68a5b329d4dc5b21f3c8c251fd72b1f31bd0116e6',
+            'browser_download_url': 'https://github.com/0xAPTX/software-share/releases/download/itunes-12.6.3.6/iTunes-12.6.3.6-Windows-x64.exe',
         }],
     }
 
