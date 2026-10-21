@@ -43,6 +43,8 @@ class CatalogTests(unittest.TestCase):
         item = build.catalog([other], self.config)[0]
         self.assertEqual(item['slug'], 'tool-1-0-123')
         self.assertEqual(item['platform'], 'macOS')
+        other['tag_name'] = '中文软件'
+        self.assertEqual(build.catalog([other], self.config)[0]['slug'], 'download-123')
 
     def test_changed_file_and_untrusted_download_host_are_rejected(self):
         changed = release()

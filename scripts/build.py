@@ -32,7 +32,8 @@ def catalog(releases, config, repository=REPOSITORY):
                     or not parsed.path.startswith('/' + repository + '/releases/download/')):
                 raise ValueError('Release asset must belong to this repository')
             extra = overrides.get((release['tag_name'], asset['name']), {})
-            slug = extra.get('slug') or re.sub(r'[^a-z0-9-]+', '-', release['tag_name'].lower()).strip('-') + '-' + str(asset['id'])
+            prefix = re.sub(r'[^a-z0-9-]+', '-', release['tag_name'].lower()).strip('-') or 'download'
+            slug = extra.get('slug') or prefix + '-' + str(asset['id'])
             if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', slug):
                 raise ValueError('Invalid download slug: ' + slug)
             if slug in seen:
