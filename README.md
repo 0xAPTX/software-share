@@ -1,4 +1,4 @@
-# APTX 软件仓库
+# APTX柯南 软件仓库
 
 公开的软件分享目录。安装包保存在 **GitHub Releases**，GitHub Pages 提供目录与固定下载入口，无需登录即可下载。
 
