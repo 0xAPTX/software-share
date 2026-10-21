@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APTX 软件仓库 · 下载与分享</title>
+  <meta name="description" content="APTX 的公开软件下载目录。查找安装包、复制分享链接，打开专属链接即可开始下载。">
+  <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css">
+  <script src="catalog.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header"><a class="brand" href="./"><span class="brand-icon">A<span>↘</span></span><span>APTX <b>软件仓库</b></span></a><a class="repository" href="https://github.com/$repo" target="_blank" rel="noopener">公开仓库 <span aria-hidden="true">↗</span></a></header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy"><div class="eyebrow"><span class="status-dot"></span> SOFTWARE LIBRARY</div><h1>软件留存。<br><span>分享，只需一个链接。</span></h1><p>把需要的安装包放在一起。找到软件，直接下载；<br class="desktop-break">也可以复制专属链接，发给需要的人。</p><div class="hero-facts"><span>无需登录</span><span>直接下载</span><span>可校验文件</span></div></div>
+        <div class="hero-graphic" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="graphic-label">KEEP / SHARE</span><div class="file-back"></div><div class="file-front"><span class="file-fold"></span><span class="file-arrow">↓</span><span class="file-line"></span><span class="file-line short"></span></div><span class="graphic-tag">随时取用 ↗</span></div>
+      </section>
+      <section class="library" aria-labelledby="library-title">
+        <div class="section-heading"><div><div class="eyebrow muted">THE COLLECTION</div><h2 id="library-title">所有软件 <span class="count">$count</span></h2></div><label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">搜索软件、系统或版本</span><input id="search" type="search" placeholder="搜索软件、系统或版本…" autocomplete="off"></label></div>
+        <div class="catalog-grid">$cards</div>
+        <p id="no-results" class="empty" hidden>没有找到匹配的软件，试试其他关键词。</p>
+      </section>
+      <aside class="sharing-note"><span class="note-icon" aria-hidden="true">↗</span><div><h2>一个软件，一个固定入口。</h2><p>点击「复制分享链接」，对方打开后即可开始下载。浏览器没有自动下载时，也可以点击页面上的下载按钮。</p></div><span class="note-number" aria-hidden="true">01 → ∞</span></aside>
+    </main>
+    <footer class="site-footer"><span>APTX · 个人软件分享目录</span><span>文件托管于 GitHub Releases</span><a href="https://github.com/$repo/releases" target="_blank" rel="noopener">全部版本 ↗</a></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>分享链接已复制</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "release": "itunes-12.6.5.3",
+      "asset": "iTunes-12.6.5.3-Windows-x64.exe",
+      "slug": "itunes",
+      "name": "iTunes",
+      "version": "12.6.5.3",
+      "platform": "Windows · 64 位",
+      "category": "媒体工具",
+      "description": "保留 App Store 功能的 iTunes 旧版安装包，适合需要旧版应用管理功能的用户。",
+      "note": "这是旧版本安装包，请自行确认与你的 Windows、设备及系统版本兼容。",
+      "sha256": "666dcc84d26ea7ba79228f744f9caeac1192a9f274a5e795cc9e9352d41d80f3"
+    }
+  ]
+}

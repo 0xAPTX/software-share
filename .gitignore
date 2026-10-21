@@ -1,0 +1,8 @@
+dist/
+releases.json
+__pycache__/
+.DS_Store
+*.exe
+*.dmg
+*.msi
+*.zip

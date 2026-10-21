@@ -1,0 +1,48 @@
+name: Publish software downloads
+on:
+  push:
+    branches: [main]
+  release:
+    types: [published, edited, deleted]
+  workflow_dispatch:
+
+concurrency:
+  group: software-share-pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Read public release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --paginate --slurp "repos/$GITHUB_REPOSITORY/releases" > releases.json
+      - name: Test catalog behavior
+        run: python -m unittest discover -s tests -v
+      - name: Build download pages
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/build.py --releases releases.json
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deployment
